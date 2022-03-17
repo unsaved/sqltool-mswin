@@ -1,0 +1,21 @@
+{
+  "name": "@admc.com/sqltool-mswin",
+  "version": "1.0.0",
+  "description": "SqlTool on MS Windows",
+  "main": "sqltoolDriver.js",
+  "bin": {
+    "sqltool": "sqltoolDriver.js"
+  },
+  "scripts": {
+    "test": "node sqltoolDriver.js -- --sql \"call 'helo';\" mem",
+    "standalone": "node sqltoolDriver.js -- --sql '\\p hello'"
+  },
+  "keywords": [ "JDBC", "RDBMS", "Database", "SQL", "HyperSQL", "HSQLDB" ],
+  "author": "Blaine Simpson <blaine.simpson@admc.com>",
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/unsaved/sqltool-mswin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unsaved/sqltool-mswin.git"
+  }
+}
