@@ -8,11 +8,11 @@ just downloading the JDBC driver SQL file for the database.
 
 # Installation
 ### install /usr/bin/sqltool:
-```bash
+```cmd
 sudo npm install -g @admc.com/sqltool-mswin
 ```
 ### install under your current directory
-```bash
+```cmd
 :: If you don't already have a node_modules subdir or "package.json" file:
 npm init -y
 sudo npm install @admc.com/sqltool-mswin
@@ -20,11 +20,11 @@ sudo npm install @admc.com/sqltool-mswin
 
 # Usage
 ### For global installation:
-```bash
+```cmd
 sqltool
 ```
 ### For local directory installation:
-```bash
+```cmd
 node_modules\.bin\sqltool
 ```
 
