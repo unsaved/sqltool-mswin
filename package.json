@@ -10,12 +10,24 @@
     "test": "node sqltoolDriver.js -- --sql \"call 'helo';\" mem",
     "standalone": "node sqltoolDriver.js -- --sql '\\p hello'"
   },
-  "keywords": [ "JDBC", "RDBMS", "Database", "SQL", "HyperSQL", "HSQLDB" ],
+  "keywords": [
+    "JDBC",
+    "RDBMS",
+    "Database",
+    "SQL",
+    "HyperSQL",
+    "HSQLDB"
+  ],
   "author": "Blaine Simpson <blaine.simpson@admc.com>",
   "license": "Apache 2.0",
   "homepage": "https://github.com/unsaved/sqltool-mswin",
   "repository": {
     "type": "git",
     "url": "https://github.com/unsaved/sqltool-mswin.git"
+  },
+  "dependencies": {
+    "@admc.com/apputil": "^1.0.0",
+    "bycontract-plus": "^1.1.3",
+    "yargs": "^17.3.1"
   }
 }
