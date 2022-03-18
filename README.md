@@ -1,5 +1,7 @@
 # Description
-node.js module for executing SqlTool on MS Windows.
+node.js modules for executing SqlTool
+
+Each supported platform has a different Git branch and a different node module.
 
 SqlTool provides a scripting/automation interface and interactive console
 interface to JDBC Databases.
