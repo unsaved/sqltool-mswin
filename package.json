@@ -1,8 +1,15 @@
 {
-  "name": "@admc.com/sqltool",
+  "name": "@admc.com/sqltool-linux-x86",
   "version": "1.0.0",
-  "description": "SqlTool module, the platform-independent parts",
+  "description": "SqlTool on Linux x86",
   "main": "sqltoolDriver.js",
+  "bin": {
+    "sqltool": "sqltoolDriver.js"
+  },
+  "scripts": {
+    "test": "node sqltoolDriver.js -- --sql \"call 'helo';\" mem",
+    "standalone": "node sqltoolDriver.js -- --sql '\\p hello'"
+  },
   "keywords": [
     "JDBC",
     "RDBMS",
