@@ -7,23 +7,23 @@ HyperSQL database engine is bundled, but you can also access any database by
 just downloading the JDBC driver SQL file for the database.
 
 # Installation
-## install /usr/bin/sqltool:
-```javascript
+### install /usr/bin/sqltool:
+```bash
 sudo npm install -g @admc.com/sqltool-linux-x86
 ```
-## install under your current directory
-```javascript
+### install under your current directory
+```bash
 npm init -y   # If you don't already have a node_modules subdir or "package.json" file.
 sudo npm install @admc.com/sqltool-linux-x86
 ```
 
 # Usage
-## For global installation:
-```javascript
+### For global installation:
+```bash
 sqltool
 ```
-## For local directory installation:
-```javascript
+### For local directory installation:
+```bash
 node_modules/.bin/sqltool
 ```
 
