@@ -14,7 +14,7 @@ const fs = require("fs");
 const path = require("path");
 
 const osToJre = {
-    linux: "hfulljre.lin",
+    linux: "hfulljre.lin86",
     win32: "hfulljre.ms",
 };
 
