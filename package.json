@@ -1,15 +1,8 @@
 {
-  "name": "@admc.com/sqltool-mswin",
+  "name": "@admc.com/sqltool",
   "version": "1.0.0",
-  "description": "SqlTool on MS Windows",
+  "description": "SqlTool module, the platform-independent parts",
   "main": "sqltoolDriver.js",
-  "bin": {
-    "sqltool": "sqltoolDriver.js"
-  },
-  "scripts": {
-    "test": "node sqltoolDriver.js -- --sql \"call 'helo';\" mem",
-    "standalone": "node sqltoolDriver.js -- --sql '\\p hello'"
-  },
   "keywords": [
     "JDBC",
     "RDBMS",
@@ -20,10 +13,10 @@
   ],
   "author": "Blaine Simpson <blaine.simpson@admc.com>",
   "license": "Apache 2.0",
-  "homepage": "https://github.com/unsaved/sqltool-mswin",
+  "homepage": "https://github.com/unsaved/sqltool-nodejs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unsaved/sqltool-mswin.git"
+    "url": "https://github.com/unsaved/sqltool-nodejs.git"
   },
   "dependencies": {
     "@admc.com/apputil": "^1.0.0",
