@@ -18,7 +18,7 @@
   {
     "label": "Build Modular JRE",
     "cmd": ["jlink", "-p",
-      "${SRC_JAVA_HOME}/jmods:${HSQLDB_ROOT}/lib/sqltool.jar:${HSQLDB_ROOT}/lib/hsqldbmin.jar",
+      "${SRC_JRE_HOME}/jmods:${HSQLDB_ROOT}/lib/sqltool.jar:${HSQLDB_ROOT}/lib/hsqldbmin.jar",
       "--compress", "2", "--strip-debug", "--no-header-files",
       "--no-man-pages", "--add-modules", " org.hsqldb,org.hsqldb.sqltool",
       "--output", "build/${TARGET_JRE_NAME}"]
