@@ -17,7 +17,7 @@ Install the package for your platform.
 
 If you want to use this product on some other platform (ARM, Apple),
 we can probably make that happen if you will test the build.
-[contact the author](mailto:blaine.simpson@admc.com?subject=sqltoolnpm).
+[Contact the author](mailto:blaine.simpson@admc.com?subject=sqltoolnpm).
 
 See [SqlTool User Guide](http://hsqldb.org/doc/2.0/util-guide/sqltool-chapt.html) about how to use SqlTool.
 See [HyperSQL User Guide](http://hsqldb.org/doc/2.0/guide/index.html) about how to use the HyperSQL database engine.
