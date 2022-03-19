@@ -8,7 +8,7 @@
  */
 
 const { execFileSync } = require("child_process");
-const { validate } = require("bycontract-plus");
+const { validate } = require("@admc.com/bycontract-plus");
 const { conciseCatcher, AppErr } = require("@admc.com/apputil");
 const fs = require("fs");
 const path = require("path");

@@ -3,7 +3,7 @@
 "use strict";
 const fs = require("fs");
 const { conciseCatcher, JsShell, AppErr } = require("@admc.com/apputil");
-const { validate } = require("bycontract-plus");
+const { validate } = require("@admc.com/bycontract-plus");
 
 const yargs = require("yargs")(process.argv.slice(2)).
   strictOptions().
