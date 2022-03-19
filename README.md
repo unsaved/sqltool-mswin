@@ -21,6 +21,8 @@ cp /usr/lib/node_modules/@admc.com/sqltool-linux-x86/arifacts/sqltool ~
 # If you don't already have a node_modules subdir or "package.json" file:
 npm init -y
 sudo npm install @admc.com/sqltool-linux-x86
+# Do this just one time if you have no sqltool.rc file before-hand:
+cp node_modules/@admc.com/sqltool-linux-x86/arifacts/sqltool ~
 ```
 
 Regardless whether you did a global or local installation, to upgrade to
