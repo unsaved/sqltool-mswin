@@ -1,0 +1,5 @@
+urlid mem
+url jdbc:hsqldb:mem:name
+username SA
+password
+charset UTF-8
