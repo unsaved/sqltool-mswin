@@ -1,6 +1,6 @@
 {
   "name": "@admc.com/sqltool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SqlTool module, the platform-independent parts",
   "main": "sqltoolDriver.js",
   "keywords": [
