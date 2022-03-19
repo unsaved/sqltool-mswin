@@ -12,8 +12,8 @@ just downloading the JDBC driver SQL file for the database.
 # Usage
 Don't install this package.
 Install the package for your platform.
-* [@admc.com/sqltool-mswin](/package/@admc.com/sqltool-mswin)
-* [@admc.com/sqltool-linux-x86](/package/@admc.com/sqltool-linux-x86)
+* [@admc.com/sqltool-mswin](https://www.npmjs.com/package/@admc.com/sqltool-mswin)
+* [@admc.com/sqltool-linux-x86](https://www.npmjs.com/package/@admc.com/sqltool-linux-x86)
 
 If you want to use this product on some other platform (ARM, Apple),
 we can probably make that happen if you will test the build.
