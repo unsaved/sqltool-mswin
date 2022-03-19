@@ -11,7 +11,8 @@ const yargs = require("yargs")(process.argv.slice(2)).
       describe: "Quiet logging by logging only at level WARN and ERROR",
       type: "boolean",
   }).
-  alias("help", "h");
+  alias("help", "h").
+  version(appVersion);
 const yargsDict = yargs.argv;
 const progName = yargsDict.$0.replace(/^.*[\\/]/, "");
 
