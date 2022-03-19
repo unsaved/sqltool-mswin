@@ -1,5 +1,5 @@
 # Description
-node.js modules for executing SqlTool for any database,
+Node.js modules for executing SqlTool to issue SQL to any JDBC database
 or for running HyperSQL database instances under node.js
 on MS Windows.
 
