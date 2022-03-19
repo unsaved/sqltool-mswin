@@ -1,6 +1,6 @@
 {
   "name": "@admc.com/sqltool-linux-x86",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "SqlTool on Linux x86",
   "main": "sqltoolDriver.js",
   "bin": {
