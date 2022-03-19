@@ -9,8 +9,9 @@ const yargs = require("yargs")(process.argv.slice(2)).
   strictOptions().
   usage(`SYNTAX: $0 [-dEhOqv] /src/jre/root hsqldb/root newjre.name cmd.json
 Command files are JSON of lists of objects with these elements:
-    cmd:         [An argv list],  REQUIRED
-    cwd:         directory,       OPTIONAL
+    label:       string      OPTIONAL
+    cmd:         [An argv list]  REQUIRED
+    cwd:         directory       OPTIONAL
     require0:    boolean     OPTIONAL  (require 0 exit values)
     stdOut:      boolean     OPTIONAL  (display stdout)
     stdErr:      boolean     OPTIONAL  (display stderr)
