@@ -1,6 +1,6 @@
 {
   "name": "@admc.com/sqltool-mswin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SqlTool on MS Windows",
   "main": "sqltoolDriver.js",
   "bin": {
