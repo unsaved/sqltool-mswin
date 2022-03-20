@@ -66,5 +66,4 @@ argsArray.unshift("-m");
 if (yargsDict.p) { argsArray.unshift(yargsDict.p); argsArray.unshift("-p"); }
 if (yargsDict.cp) { argsArray.unshift(yargsDict.cp); argsArray.unshift("-cp"); }
 
-console.log(argsArray);
 require("./jreRunner")(argsArray, yargsDict.v);

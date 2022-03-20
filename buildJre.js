@@ -3,7 +3,8 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
-const { conciseCatcher, JsShell, AppErr } = require("@admc.com/apputil");
+const { appVersion, conciseCatcher, JsShell, AppErr } =
+  require("@admc.com/apputil");
 const { validate } = require("@admc.com/bycontract-plus");
 
 const yargs = require("yargs")(process.argv.slice(2)).
@@ -82,8 +83,8 @@ conciseCatcher(function(cmdFile, srcJmods, hsqldbPath, newJre, out, err) {
     if (fs.existsSync(newJreName) && yargsDict.r)
         fs.rmSync(newJreName, {force: true, recursive: true});
     if (fs.existsSync(newJreName))
-        throw new AppErr(
-      'JRE target directory '${targetJreName}' already exists.  Try -r switch`);
+        throw new AppErr(`JRE target directory '${targetJreName}`
+          + "already exists.  Try -r switch");
     console.warn(
       `Building '${targetJreName}' with JDK '${process.env.JAVA_HOME}'`);
     const jsShell =
