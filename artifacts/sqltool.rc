@@ -1,5 +1,30 @@
+# IMPORTANT:  If you add any real password to this file, then the
+# file must be protected.  On UNIX, at the least set the file
+# privileges to 0600 or better.
+
+# See the file "sqltool-samples.rc" in your package distribution
+# for settings to connect to lots of different database engines,
+# now including all AWS SQL databases.
+# (sqltool-samples.rc file will be in
+# "node_modules/@admc.com/sqltool*/artifacts/"
+# under your local package directory or global install prefix,
+# depending on how you installed this package.
+# For global install this will most often be /usr/lib/node_modules/...
+# or %APPDATA%\npm\node_modules/...
+
+# Fully-functional in-memory HyperSQL database.
 urlid mem
 url jdbc:hsqldb:mem:name
 username SA
 password
 charset UTF-8
+
+# Example for connecting to an external MariaDB database.
+# For any database engine other than HyperSQL, you will need to set up
+# the databases's JDBC driver.  This is explained in the node module
+# READMEs at https://www.npmjs.com/package/@admc.com/sqltool-linux-x86
+# or https://www.npmjs.com/package/@admc.com/sqltool-mswin
+urlid maria
+url jdbc:mariadb://dbhost.cbsrorvfwhpc.us-east-1.rds.amazonaws.com/dbname
+username blaine
+password Ez0quai:qu{e

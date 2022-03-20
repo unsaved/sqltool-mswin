@@ -21,6 +21,7 @@
   "dependencies": {
     "@admc.com/apputil": "^1.0.0",
     "@admc.com/bycontract-plus": "^1.2.1",
+    "path": "^0.12.7",
     "yargs": "^17.3.1"
   }
 }
