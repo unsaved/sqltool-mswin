@@ -14,7 +14,7 @@ $0 [-dqv] [-m mod/spec] [-p modpath] [-cp classpath] [--] [sqltool params...]
     (so we can distinguish switch for the JRE from switch for SqlTool program).
 OR
 $0 -h|-s    # show Help or generate 'sqltool.rc' file and exit`.
-    replaceAll(/ /g, "\u2009")).
+    replace(/ /g, "\u2009")).
   option("v", { describe: "Verbose", type: "boolean", }).
   option("d", { describe: "Debug logging", type: "boolean", }).
   option("q", {
