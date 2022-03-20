@@ -28,7 +28,7 @@
       "--output", "build/${TARGET_JRE_NAME}"]
   }, {
     "label": "Test Modular JRE.  Should fail if ${SRC_JRE_JMODS} not for ${THIS_PLATFORM}",
-    "cmd": ["build/${TARGET_JRE_NAME}/bin/java", "-m", "org.hsqldb.sqltool",
+    "cmd": ["${TARGET_JRE_NAME}/bin/java", "-m", "org.hsqldb.sqltool",
            "--sql", "call 'helo';", "mem"]
   }
 ]
