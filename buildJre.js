@@ -2,6 +2,7 @@
 
 "use strict";
 const fs = require("fs");
+const path = require("path");
 const { conciseCatcher, JsShell, AppErr } = require("@admc.com/apputil");
 const { validate } = require("@admc.com/bycontract-plus");
 
@@ -49,6 +50,8 @@ const newJreName = yargsDict._.pop();
 conciseCatcher(function(cmdFile, srcJmods, hsqldbPath, newJre, out, err) {
     validate(arguments,
       ["string", "string", "string", "string", "boolean=", "boolean="]);
+    if (!/\Sjre.\S/.test(newJreName))
+        throw new AppErr(`New JRE name '${newJreName}' not of form *?jre.?*`);
     if (!("JAVA_HOME" in process.env))
         throw new AppErr("You must set env var JAVA_HOME to your JDK root");
     if (!fs.existsSync(process.env.JAVA_HOME + "/bin/jlink")
@@ -76,12 +79,13 @@ conciseCatcher(function(cmdFile, srcJmods, hsqldbPath, newJre, out, err) {
         throw new AppErr("java not executable at "
           + process.env.JAVA_HOME + "/bin/java");
     }
-    if (fs.existsSync("build") && yargsDict.r)
-        fs.rmSync("build", {force: true, recursive: true});
-    if (fs.existsSync("build"))
+    if (fs.existsSync(newJreName) && yargsDict.r)
+        fs.rmSync(newJreName, {force: true, recursive: true});
+    if (fs.existsSync(newJreName))
         throw new AppErr(
-          "Build directory 'build' already exists.  Try -r switch");
-    console.warn(`Building with JDK '${process.env.JAVA_HOME}'`);
+      'JRE target directory '${targetJreName}' already exists.  Try -r switch`);
+    console.warn(
+      `Building '${targetJreName}' with JDK '${process.env.JAVA_HOME}'`);
     const jsShell =
       new JsShell(cmdFile, JSON.parse(fs.readFileSync(cmdFile, "utf8")),
         undefined, undefined, undefined, {
