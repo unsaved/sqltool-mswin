@@ -25,8 +25,7 @@
       "--no-man-pages", "--add-modules", "org.hsqldb,org.hsqldb.sqltool",
       "--output", "${TARGET_JRE_NAME}"]
   }, {
-    "label": "Test Modular JRE",
-    "condition" : "process.platform === 'linux'",
+    "label": "Test Modular JRE.  Should fail if ${SRC_JRE_JMODS} not for ${THIS_PLATFORM}",
     "cmd": ["${TARGET_JRE_NAME}/bin/java", "-m", "org.hsqldb.sqltool",
            "--sql", "call 'helo';", "mem"]
   }
