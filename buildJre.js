@@ -95,6 +95,7 @@ conciseCatcher(function(cmdFile, srcJmods, hsqldbPath, newJre, out, err) {
             HSQLDB_ROOT: hsqldbPath,
             TARGET_JRE_NAME: newJre,
             SRC_JRE_JMODS: srcJmods,
+            THIS_PLATFORM: require("os").platform(),
         });
     console.debug(jsShell.id + " command file validated successfully");
     console.info("%s took %s s.", jsShell.id,
