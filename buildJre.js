@@ -17,6 +17,7 @@ Command files are JSON of lists of objects with these elements:
     require0:    boolean     OPTIONAL  (require 0 exit values)
     stdOut:      boolean     OPTIONAL  (display stdout)
     stdErr:      boolean     OPTIONAL  (display stderr)
+    condition:   string      OPTINAL   (JS code that evaluates to true or false)
     interactive: boolean     OPTIONAL  (allow interactive input)`.
       replace(/ /g, "\u2009")).
   option("v", { describe: "Verbose", type: "boolean", }).
