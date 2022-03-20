@@ -3,7 +3,8 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
-const { conciseCatcher, JsShell, AppErr } = require("@admc.com/apputil");
+const { appVersion, conciseCatcher, JsShell, AppErr } =
+  require("@admc.com/apputil");
 const { validate } = require("@admc.com/bycontract-plus");
 
 const yargs = require("yargs")(process.argv.slice(2)).
@@ -16,6 +17,7 @@ Command files are JSON of lists of objects with these elements:
     require0:    boolean     OPTIONAL  (require 0 exit values)
     stdOut:      boolean     OPTIONAL  (display stdout)
     stdErr:      boolean     OPTIONAL  (display stderr)
+    condition:   string      OPTIONAL  (JS code that evaluates to true or false)
     interactive: boolean     OPTIONAL  (allow interactive input)`.
       replace(/ /g, "\u2009")).
   option("v", { describe: "Verbose", type: "boolean", }).
@@ -82,10 +84,10 @@ conciseCatcher(function(cmdFile, srcJmods, hsqldbPath, newJre, out, err) {
     if (fs.existsSync(newJreName) && yargsDict.r)
         fs.rmSync(newJreName, {force: true, recursive: true});
     if (fs.existsSync(newJreName))
-        throw new AppErr(
-      'JRE target directory '${targetJreName}' already exists.  Try -r switch`);
+        throw new AppErr(`JRE target directory '${newJreName}`
+          + "already exists.  Try -r switch");
     console.warn(
-      `Building '${targetJreName}' with JDK '${process.env.JAVA_HOME}'`);
+      `Building '${newJreName}' with JDK '${process.env.JAVA_HOME}'`);
     const jsShell =
       new JsShell(cmdFile, JSON.parse(fs.readFileSync(cmdFile, "utf8")),
         undefined, undefined, undefined, {
