@@ -1,6 +1,4 @@
 [
-  { "label": "Make build dir", "cmd": ["mkdir", "build"] },
-
   { "label": "Verify that source sqltool.jar is modular",
     "cmd": [ "${JAVA_HOME}/bin/java", "-p",
            "${HSQLDB_ROOT}/lib/sqltool.jar", "-m",
@@ -25,11 +23,11 @@
       "${SRC_JRE_JMODS}:${HSQLDB_ROOT}/lib/sqltool.jar:${HSQLDB_ROOT}/lib/hsqldbmin.jar",
       "--compress", "2", "--strip-debug", "--no-header-files",
       "--no-man-pages", "--add-modules", "org.hsqldb,org.hsqldb.sqltool",
-      "--output", "build/${TARGET_JRE_NAME}"]
+      "--output", "${TARGET_JRE_NAME}"]
   }, {
     "label": "Test Modular JRE",
     "condition" : "process.platform === 'linux'",
-    "cmd": ["build/${TARGET_JRE_NAME}/bin/java", "-m", "org.hsqldb.sqltool",
+    "cmd": ["${TARGET_JRE_NAME}/bin/java", "-m", "org.hsqldb.sqltool",
            "--sql", "call 'helo';", "mem"]
   }
 ]
