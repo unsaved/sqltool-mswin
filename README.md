@@ -96,4 +96,3 @@ also give any switches to SqlTool.
 * [HyperSQL User Guide](http://hsqldb.org/doc/2.0/guide/index.html) about how to use the HyperSQL database engine.
 * node_modules/@admc.com/sqltool\*/artifacts/sqltool-samples.rc
  examples for connecting to many different databases.
-
