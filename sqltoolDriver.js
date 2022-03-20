@@ -49,5 +49,4 @@ if (yargsDict.p) { argsArray.unshift(yargsDict.p); argsArray.unshift("-p"); }
 if (yargsDict.cp) { argsArray.unshift(yargsDict.cp); argsArray.unshift("-cp"); }
 
 console.log(argsArray);
-//require("./jreRunner")(["-m", "org.hsqldb.sqltool", ...yargsDict._], yargsDict.v);
 require("./jreRunner")(argsArray, yargsDict.v);
