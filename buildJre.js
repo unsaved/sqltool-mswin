@@ -84,10 +84,10 @@ conciseCatcher(function(cmdFile, srcJmods, hsqldbPath, newJre, out, err) {
     if (fs.existsSync(newJreName) && yargsDict.r)
         fs.rmSync(newJreName, {force: true, recursive: true});
     if (fs.existsSync(newJreName))
-        throw new AppErr(`JRE target directory '${targetJreName}`
+        throw new AppErr(`JRE target directory '${newJreName}`
           + "already exists.  Try -r switch");
     console.warn(
-      `Building '${targetJreName}' with JDK '${process.env.JAVA_HOME}'`);
+      `Building '${newJreName}' with JDK '${process.env.JAVA_HOME}'`);
     const jsShell =
       new JsShell(cmdFile, JSON.parse(fs.readFileSync(cmdFile, "utf8")),
         undefined, undefined, undefined, {
