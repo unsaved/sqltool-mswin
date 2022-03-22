@@ -97,7 +97,7 @@ The "--" (non-)switch is unnecessary here, but would be required if you
 also give any switches to SqlTool.
 
 # References
-* [Inlne RC Auth section of SqlTool User Guide](http://hsqldb.org/doc/2.0/util-guide/sqltool-chapt.html#sqltool_ilauth-sect) about giving connection details on the command line rather than in an RC file.
+* [Inline RC Auth section of SqlTool User Guide](http://hsqldb.org/doc/2.0/util-guide/sqltool-chapt.html#sqltool_ilauth-sect) about giving connection details on the command line rather than in an RC file.
 * [SqlTool User Guide](http://hsqldb.org/doc/2.0/util-guide/sqltool-chapt.html) about how to use SqlTool.
 * [HyperSQL User Guide](http://hsqldb.org/doc/2.0/guide/index.html) about how to use the HyperSQL database engine.
 * node_modules\@admc.com\sqltool\*\artifacts\sqltool-samples.rc
